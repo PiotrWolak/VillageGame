@@ -22,7 +22,7 @@ public class Village {
         int cost = 10 * facility.getLevel();
         System.out.println("The  cost of upgrading " + facility.getName() + " is " + cost + "gold");
         System.out.println("Do you want to proceed ? 1- yes, 2-no");
-        int choice = Main.getChoiceMenu();
+        int choice = Menu.getChoiceMenu();
         switch (choice) {
             case 1:
                 if (this.getGold() >= cost) {

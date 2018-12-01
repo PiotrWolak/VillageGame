@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Game1" />
         <module name="NewGameMvn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Game1" target="1.8" />
       <module name="NewGameMvn" target="1.8" />
     </bytecodeTargetLevel>
   </component>
