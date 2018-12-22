@@ -1,4 +1,4 @@
-package edu.piotr;
+package edu.piotr.Buildings;
 
 public interface Facility {
     void upgrade();

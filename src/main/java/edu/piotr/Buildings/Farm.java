@@ -1,4 +1,4 @@
-package edu.piotr;
+package edu.piotr.Buildings;
 
 public class Farm extends Building {
     private int income;
@@ -12,10 +12,13 @@ public class Farm extends Building {
         income = 1;
     }
 
+    public void doubleIncome() {
+        this.income *= 2;
+    }
 
     public void upgrade() {
         //todo check whether this actually works
         super.upgrade();
-        income = income * 2;
+        doubleIncome();
     }
 }

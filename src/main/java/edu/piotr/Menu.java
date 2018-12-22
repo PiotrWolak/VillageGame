@@ -1,5 +1,6 @@
 package edu.piotr;
 
+import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,6 +8,9 @@ import java.util.Scanner;
 import static java.lang.System.exit;
 
 public class Menu {
+    FileInputStream story = null;
+    FileOutputStream highscore = null;
+
 
     public static void playRound(Village village) {
         int round = 0;
@@ -45,8 +49,7 @@ public class Menu {
                 System.out.println("Your treasure is filled up with " + village.getGold() + " gold");
                 break;
             case 4:
-                System.out.println("Farm on level " + village.getFarm().getLevel());
-                System.out.println("Tower on level " + village.getTower().getLevel());
+                village.printFacilities();
                 break;
             case 5:
                 exit(0);
@@ -69,14 +72,53 @@ public class Menu {
         return village;
 
     }
-
-    public static void showMenu() {
-        System.out.println("1 - upgrade the farm");
+/*public static void showMenu(){
+ System.out.println("1 - upgrade the farm");
         System.out.println("2 - upgrade the tower");
         System.out.println("3 - show treasure");
         System.out.println("4 - show facilities");
         System.out.println("5 - exit");
+        }
+ */
+    public static void showMenu() {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("menu"));
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+            e.printStackTrace();
+        }
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+
+            while (line != null) {
+                sb.append(line);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+            }
+            String everything = sb.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("something went terribly wrong");
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+                System.out.println("Something went wrong during closing of the file");
+                e.printStackTrace();
+            }
+        }
+
+
     }
+
+
+
+
+
+
+
 
     public static int getChoiceMenu() {
         int choice = 0;

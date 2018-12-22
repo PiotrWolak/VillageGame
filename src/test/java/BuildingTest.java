@@ -1,4 +1,5 @@
-import edu.piotr.Building;
+import edu.piotr.Buildings.Building;
+import edu.piotr.Buildings.Farm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -6,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BuildingTest {
     @Test
     void testUpgrade(){
-        Building b1 = new Building();
-        b1.upgrade();
-        int level = b1.getLevel();
+        Building f1 = new Farm();
+        f1.upgrade();
+        int level = f1.getLevel();
         assertEquals(2,level);
     }
 }

@@ -1,6 +1,6 @@
-package edu.piotr;
+package edu.piotr.Buildings;
 
-public class Building implements Facility{
+public abstract class Building implements Facility {
     private int level;
     private String name;
 

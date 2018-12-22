@@ -1,4 +1,4 @@
-package edu.piotr;
+package edu.piotr.Buildings;
 
 public class Tower extends Building {
     private int defense;

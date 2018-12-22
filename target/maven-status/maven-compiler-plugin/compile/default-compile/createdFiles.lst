@@ -1,7 +1,9 @@
-edu\piotr\Building.class
-edu\piotr\MoneyMaker.class
-edu\piotr\Main.class
-edu\piotr\Farm.class
-edu\piotr\Facility.class
-edu\piotr\Village.class
-edu\piotr\Tower.class
+edu/piotr/Main.class
+edu/piotr/Village.class
+edu/piotr/Treasury.class
+edu/piotr/Tower.class
+edu/piotr/Menu.class
+edu/piotr/MoneyMaker.class
+edu/piotr/Building.class
+edu/piotr/Farm.class
+edu/piotr/Facility.class
